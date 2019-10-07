@@ -1,25 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Fragment } from 'react';
 import './App.css';
+import Misc from './components/Misc';
+import output from './json/pl_pl-palac-art.json';
+import Cinema from './components/Cinema';
+import Showtimes from './components/Showtimes';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <h1 className='header'>Viewer</h1>
+      <Misc output={output} />
+      <Cinema output={output} />
+      <Showtimes output={output} />
+    </Fragment>
   );
 }
 
