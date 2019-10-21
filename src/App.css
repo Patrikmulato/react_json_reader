@@ -1,4 +1,47 @@
+body {
+  background-color: #2d3436 !important;
+  color: #dfe6e9 !important;
+}
+h3 {
+  color: #74b9ff;
+}
+p {
+  padding-left: 5px;
+  margin-bottom: 8px !important;
+}
 .header {
   text-align: center;
   justify-content: center;
+}
+.misc {
+  font-size: 12px;
+  background-color: #636e72;
+  border-radius: 10px;
+}
+.misc p {
+  margin-bottom: 5px;
+}
+.cinemas {
+  font-size: 18px;
+}
+#push {
+  color: #0984e3;
+  padding-left: 5px;
+}
+.showtimes {
+  margin-bottom: 10px;
+  border: 1px solid #74b9ff;
+  border-radius: 5px;
+}
+.showtimes span {
+  font-size: 20px;
+}
+.showtimes .true {
+  color: #fdcb6e;
+}
+.title {
+  color: #d63031;
+}
+.start {
+  color: #ff7675;
 }

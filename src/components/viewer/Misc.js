@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Misc = output => {
-  const { crawler } = output.output;
+const Misc = jsonFile => {
+  const { crawler } = jsonFile.jsonFile;
   return (
-    <div>
+    <div className='misc'>
       <h3>Misc</h3>
       <p>id: {crawler.id}</p>
       <p>version: {crawler['crawl-e'].version}</p>

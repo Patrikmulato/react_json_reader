@@ -1,18 +1,17 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import './App.css';
-import Misc from './components/Misc';
-import output from './json/pl_pl-palac-art.json';
-import Cinema from './components/Cinema';
-import Showtimes from './components/Showtimes';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Viewer from './components/pages/Viewer';
+import Home from './components/pages/Home';
 
 function App() {
   return (
-    <Fragment>
-      <h1 className='header'>Viewer</h1>
-      <Misc output={output} />
-      <Cinema output={output} />
-      <Showtimes output={output} />
-    </Fragment>
+    <Router>
+      <Switch>
+        <Route exact path='/:id' component={Viewer} />
+        <Route exact path='/' component={Home} />
+      </Switch>
+    </Router>
   );
 }
 
