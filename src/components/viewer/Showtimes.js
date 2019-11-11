@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Showtimes = jsonFile => {
-  const { showtimes } = jsonFile.jsonFile;
+const Showtimes = ({ jsonFile }) => {
+  const { showtimes } = jsonFile;
   return (
     <div>
-      <h3>Showtimes infos</h3>
+      <h2>Showtimes infos</h2>
       {showtimes.map((showtime, i) => (
         <div className='showtimes' key={i}>
           <p>

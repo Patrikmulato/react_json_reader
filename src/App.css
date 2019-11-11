@@ -2,7 +2,8 @@ body {
   background-color: #2d3436 !important;
   color: #dfe6e9 !important;
 }
-h3 {
+h3,
+h2 {
   color: #74b9ff;
 }
 p {
@@ -23,6 +24,7 @@ p {
 }
 .cinemas {
   font-size: 18px;
+  padding-bottom: 40px;
 }
 #push {
   color: #0984e3;
@@ -44,4 +46,16 @@ p {
 }
 .start {
   color: #ff7675;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }

@@ -6,6 +6,7 @@ import Misc from '../../components/viewer/Misc';
 import Cinema from '../../components/viewer/Cinema';
 import Showtimes from '../../components/viewer/Showtimes';
 import { useParams } from 'react-router-dom';
+import ShowtimesNew from '../viewer/ShowtimesNew';
 
 const Viewer = () => {
   let { id } = useParams();
@@ -20,16 +21,13 @@ const Viewer = () => {
           <h1 className='header'>Viewer</h1>
         </Col>
       </Row>
-      <Row className='misc'>
-        <Misc jsonFile={jsonFile} />
-      </Row>
 
       <Row>
         <Cinema jsonFile={jsonFile} />
       </Row>
 
       <Row>
-        <Showtimes jsonFile={jsonFile} />
+        <ShowtimesNew jsonFile={jsonFile} />
       </Row>
     </Container>
   );

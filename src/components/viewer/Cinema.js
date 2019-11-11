@@ -1,22 +1,80 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
-const Cinema = jsonFile => {
-  const { cinema } = jsonFile.jsonFile;
+const Cinema = ({ jsonFile }) => {
+  const { cinema } = jsonFile;
   return (
     <div className='cinemas'>
-      <h3>Cinema infos</h3>
-      <p>name: {cinema.name}</p>
-      <p>address: {cinema.address}</p>
+      <h2>Cinema Data's:</h2>
+      {/* NAME */}
       <p>
-        website:
-        <a id='push' href={cinema.website}>
-          {cinema.website}
-        </a>
+        {cinema.name ? (
+          <Fragment>
+            <b>name: </b>
+            <span>{cinema.name}</span>
+          </Fragment>
+        ) : (
+          <b>
+            name: <span style={{ color: '#d63031' }}>*required info*</span>
+          </b>
+        )}
       </p>
-      <p>phone: {cinema.phone}</p>
-      <p>email: {cinema.email}</p>
-      <p>lat: {cinema.lat}</p>
-      <p>lon: {cinema.lon}</p>
+      {/* ADDRESS */}
+      <p>
+        {cinema.address ? (
+          <Fragment>
+            <b>address: </b>
+            <span>{cinema.address}</span>
+          </Fragment>
+        ) : (
+          <b>
+            address: <span style={{ color: '#d63031' }}>*required info*</span>
+          </b>
+        )}
+      </p>
+      {/* WEBSITE */}
+      {cinema.website ? (
+        <p>
+          <b>website:</b>
+          <a id='push' href={cinema.website}>
+            {cinema.website}
+          </a>
+        </p>
+      ) : null}
+      {/* PHONE */}
+      {cinema.phone ? (
+        <p>
+          <b>phone:</b>
+          <span> {cinema.phone}</span>
+        </p>
+      ) : null}
+      {/* EMAIL */}
+      {cinema.email ? (
+        <p>
+          <b>email:</b>
+          <span> {cinema.email}</span>
+        </p>
+      ) : null}
+      {/* LAT */}
+      {cinema.lat ? (
+        <p>
+          <b>lat:</b>
+          <span> {cinema.lat}</span>
+        </p>
+      ) : null}
+      {/* LON */}
+      {cinema.lon ? (
+        <p>
+          <b>lon:</b>
+          <span> {cinema.lon}</span>
+        </p>
+      ) : null}
+      {/* SLUG */}
+      {cinema.slug ? (
+        <p>
+          <b>slug:</b>
+          <span> {cinema.slug}</span>
+        </p>
+      ) : null}
     </div>
   );
 };

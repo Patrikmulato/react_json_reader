@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Misc = jsonFile => {
-  const { crawler } = jsonFile.jsonFile;
+const Misc = ({ jsonFile }) => {
+  const { crawler } = jsonFile;
   return (
     <div className='misc'>
       <h3>Misc</h3>
