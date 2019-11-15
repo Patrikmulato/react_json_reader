@@ -1,22 +1,20 @@
-import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import output from '../../json/pl_pl-palac-art.json';
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 // Importing all json
 const importAll = r => r.keys().map(r);
 
-const jsonFiles = importAll(require.context('../../json', false, /\.json$/));
+const jsonFiles = importAll(require.context("../../json", false, /\.json$/));
 
 console.log(jsonFiles);
 const Home = () => {
-  console.log(output);
   return (
     <div>
-      <Container className='main'>
+      <Container className="main">
         <Row>
           <Col>
-            <h1 className='header'>Review Dashboard</h1>
+            <h1 className="header">Review Dashboard</h1>
           </Col>
         </Row>
         <Row>
