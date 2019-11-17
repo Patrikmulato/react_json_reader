@@ -4,8 +4,9 @@ const Attributes = ({ s }) => {
   return (
     <Fragment>
       {' '}
-      (
+      
       {s.attributes.map(attr => {
+        (
         if (attr.match(/Imax/i)) {
           return (
             <span className='attributes' key={attr}>
@@ -27,8 +28,9 @@ const Attributes = ({ s }) => {
         } else {
           return null;
         }
+        )
       })}
-      )
+      
     </Fragment>
   );
 };
