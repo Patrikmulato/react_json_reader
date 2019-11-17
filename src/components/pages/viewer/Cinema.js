@@ -14,7 +14,7 @@ const Cinema = ({ jsonFile }) => {
           </Fragment>
         ) : (
           <b>
-            name: <span style={{ color: '#d63031' }}>*required info*</span>
+            name: <span className='alert'>*required info*</span>
           </b>
         )}
       </p>
@@ -27,7 +27,7 @@ const Cinema = ({ jsonFile }) => {
           </Fragment>
         ) : (
           <b>
-            address: <span style={{ color: '#d63031' }}>*required info*</span>
+            address: <span className='alert'>*required info*</span>
           </b>
         )}
       </p>

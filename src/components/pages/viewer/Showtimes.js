@@ -19,11 +19,11 @@ const Showtimes = ({ jsonFile }) => {
   let filteredShowtimes = [];
   filteredShowtimes.push(groupByTitle(showtimes));
   return (
-    <div>
+    <div className='showtimes'>
       <h2>Showtimes </h2>
       {uniqueShowtimes.map((title, i) => (
         <div key={i}>
-          <h3>{title}</h3>
+          <h4>{title}</h4>
           <Days filteredShowtimes={filteredShowtimes} title={title} />
         </div>
       ))}

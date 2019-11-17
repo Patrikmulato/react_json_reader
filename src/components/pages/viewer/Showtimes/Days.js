@@ -11,12 +11,16 @@ const Days = ({ filteredShowtimes, title }) => {
       {Array(7)
         .fill()
         .map((_, i) => (
-          <div key={i}>
-            <Moment add={{ days: i }} format='YYYY-MM-DD' key={i}>
-              {date}
-            </Moment>
+          <ul key={i} className='showtimes-field'>
+            <li>
+              <h5>
+                <Moment add={{ days: i }} format='YYYY-MM-DD' key={i}>
+                  {date}
+                </Moment>
+              </h5>
+            </li>
             <Times filteredShowtimes={filteredShowtimes} title={title} i={i} />
-          </div>
+          </ul>
         ))}
     </Fragment>
   );

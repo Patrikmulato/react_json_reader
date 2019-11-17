@@ -2,17 +2,13 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Cinema from '../../components/viewer/Cinema';
+import Cinema from './viewer/Cinema';
 import { useParams } from 'react-router-dom';
-import Showtimes from '../viewer/Showtimes';
+import Showtimes from './viewer/Showtimes';
 
 const Viewer = () => {
-  let params = useParams();
   let { id } = useParams();
   const jsonFile = require(`../../json/${id}.json`);
-  console.log(jsonFile);
-
-  console.log(params);
   return (
     <Container className='main'>
       <Row>
